@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tabity Tabs</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_pager_tab_strip">PagerTabStripActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_tab_layout">Tab Layout Activity</string>
+</resources>
