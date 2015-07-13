@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
@@ -40,11 +37,11 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onOptionSelected(int id) {
-        if (id == 0) {
+        if (id == MainListFragment.IDX_LIST_PAGERTABSTRIP) {
             Intent intent = new Intent(this, PagerTabStripActivity.class);
             startActivity(intent);
         }
-        else if (id ==1) {
+        else if (id == MainListFragment.IDX_LIST_TABLAYOUT) {
             Intent intent = new Intent(this, TabLayoutActivity.class);
             startActivity(intent);
         }

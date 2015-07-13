@@ -8,20 +8,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-/**
- *
- */
-public class TabLayoutActivityFragment extends Fragment {
-
+public class PageFragment extends Fragment {
     private static final String ARG_PAGE_NUMBER = "page_number";
 
-    public TabLayoutActivityFragment() {
+    public PageFragment() {
     }
 
-    public static TabLayoutActivityFragment newInstance(int sectionNumber) {
-        TabLayoutActivityFragment fragment = new TabLayoutActivityFragment();
+    public static PageFragment newInstance(int page) {
+        PageFragment fragment = new PageFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_PAGE_NUMBER, sectionNumber);
+        args.putInt(ARG_PAGE_NUMBER, page);
         fragment.setArguments(args);
         return fragment;
     }
@@ -29,11 +25,11 @@ public class TabLayoutActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_tab_layout, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_page_layout, container, false);
 
         TextView txt = (TextView) rootView.findViewById(R.id.page_number_label);
-        int position = getArguments().getInt(ARG_PAGE_NUMBER, -1);
-        txt.setText(String.format("Page %d", position));
+        int page = getArguments().getInt(ARG_PAGE_NUMBER, -1);
+        txt.setText(String.format("Page %d", page));
 
         return rootView;
     }

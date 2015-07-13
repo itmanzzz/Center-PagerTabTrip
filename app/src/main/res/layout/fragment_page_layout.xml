@@ -4,9 +4,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="net.voidynullness.android.tabitytabs.PagerTabStripActivity$PlaceholderFragment">
+    tools:context="net.voidynullness.android.tabitytabs.PageFragment">
 
-    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <TextView android:id="@+id/page_number_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:gravity="center"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

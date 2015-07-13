@@ -10,8 +10,9 @@ import android.widget.ListView;
 public class MainListFragment extends ListFragment {
     private OnOptionSelectedListener mListener;
 
-    private static final String[] items= { "PagerTabStrip", "TabLayout (Design)" };
-    //private ArrayList<String> options = new ArrayList<String>();
+    public static final String[] LIST_OPTIONS = { "PagerTabStrip", "TabLayout" };
+    public static final int IDX_LIST_PAGERTABSTRIP = 0;
+    public static final int IDX_LIST_TABLAYOUT = 1;
 
     public MainListFragment() {
     }
@@ -19,8 +20,6 @@ public class MainListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -30,7 +29,7 @@ public class MainListFragment extends ListFragment {
         setListAdapter(new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_1,
                 android.R.id.text1,
-                items));
+                LIST_OPTIONS));
     }
 
     @Override
@@ -58,7 +57,8 @@ public class MainListFragment extends ListFragment {
             mListener.onOptionSelected(position);
         }
     }
+
     public interface OnOptionSelectedListener {
-        public void onOptionSelected(int id);
+        void onOptionSelected(int id);
     }
 }
