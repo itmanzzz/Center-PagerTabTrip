@@ -13,13 +13,12 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        // getItem is called to instantiate the fragment for the given page.
         return PageFragment.newInstance(position + 1);
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 10;
     }
 
     @Override

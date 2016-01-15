@@ -3,5 +3,4 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_pager_tab_strip">PagerTabStrip</string>
-    <string name="title_activity_tab_layout">TabLayout</string>
 </resources>
